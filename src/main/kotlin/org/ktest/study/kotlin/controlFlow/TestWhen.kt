@@ -1,6 +1,17 @@
 package org.ktest.study.kotlin.controlFlow
 
+import java.awt.Color
+
 const val xVal = 100
+
+enum class TRAFFIC_LIGHT {
+    RED,
+    BLUE,
+    GREEN,
+    YELLOW
+}
+
+fun getMyColor(): TRAFFIC_LIGHT = TRAFFIC_LIGHT.GREEN
 
 fun main() {
     val x = 100
@@ -32,4 +43,15 @@ fun main() {
         }
 
     }
+
+    val y = getMyColor()
+    println("----------------------------------------")
+    println("y: $y")
+    when (y) {
+    TRAFFIC_LIGHT.RED  -> println("Stop")
+    TRAFFIC_LIGHT.YELLOW -> println("Hold")
+    TRAFFIC_LIGHT.BLUE, TRAFFIC_LIGHT.GREEN -> println("go")
+    }
+
 }
+
