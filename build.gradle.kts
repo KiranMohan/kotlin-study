@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.4.21"
+    kotlin("jvm") version "1.4.31"
 }
 
 group = "org.ktest.study"
@@ -11,4 +11,5 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 }
